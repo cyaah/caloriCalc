@@ -1,0 +1,152 @@
+html,
+.food-input,
+.search-food-btn,
+.select-food {
+  font-size: calc(10px + 2vmin);
+}
+
+body {
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* remove the outline for mouse users but preserves it for keyboard users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.app {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+
+.app {
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.search-food-btn,
+.select-food,
+.cards-container,
+.total-calories {
+  width: 100%;
+}
+
+.food-input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.search-food-btn {
+  display: block;
+  margin: 14px auto 0;
+}
+
+.cards-container {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  -o-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.search-food-form,
+.food-card,
+.select-food {
+  margin-bottom: 15px;
+}
+
+.food-card {
+  -webkit-flex-basis: 25%;
+  -moz-flex-basis: 25%;
+  -ms-flex-basis: 25%;
+  -o-flex-basis: 25%;
+  flex-basis: 25%;
+  padding: 15px;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background: rgba(139, 189, 145, 1);
+}
+
+.food-card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23),
+    0 12px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes rotating {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 15px;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #555;
+  animation: rotating 1.2s infinite linear;
+}
+
+.error {
+  background-color: red;
+}
+
+.total-calories {
+  margin-bottom: 15px;
+  background-color: teal;
+}
+
+@media screen and (max-width: 768px) {
+  .food-card {
+    -webkit-flex-basis: 44%;
+    -moz-flex-basis: 44%;
+    -ms-flex-basis: 44%;
+    -o-flex-basis: 44%;
+    flex-basis: 44%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .food-card {
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    -o-flex-basis: 100%;
+    flex-basis: 100%;
+  }
+}
