@@ -1,6 +1,6 @@
 Instructions to run app
 
-#Download and unzip
+#Git clone or download
 #Use terminal and go to directory downloaded
 #Enter "npm install"
 #Enter "npm start"
